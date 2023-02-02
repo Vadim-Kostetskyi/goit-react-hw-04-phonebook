@@ -1,6 +1,6 @@
 const { useState } = require('react');
 
-const Form = () => {
+const Form = ({ onSubmit }) => {
   const [name, setName] = useState('');
   const [number, setnumber] = useState('');
 
@@ -22,11 +22,12 @@ const Form = () => {
 
   const handleSubmit = el => {
     el.preventDefault();
-    console.log(el);
+    console.log(number);
 
-    // this.props.onSubmit(this.state);
-
-    // props.onSubmit(name, number);
+    onSubmit({
+      name,
+      number,
+    });
 
     reset();
   };
