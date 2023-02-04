@@ -31,8 +31,6 @@ const Feedback = () => {
       number: contact.number,
     };
 
-    console.log(newContact);
-
     const unique = contacts.map(elem =>
       contact.name.toLowerCase() !== elem.name.toLowerCase() ? true : false
     );

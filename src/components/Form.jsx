@@ -22,7 +22,6 @@ const Form = ({ onSubmit }) => {
 
   const handleSubmit = el => {
     el.preventDefault();
-    console.log(number);
 
     onSubmit({
       name,
